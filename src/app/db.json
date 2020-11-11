@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Robert",
+      "last_name": "Schwartz",
+      "email": "rob23@gmail.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Lucy",
+      "last_name": "Ballmer",
+      "email": "lucyb56@gmail.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Anna",
+      "last_name": "Smith",
+      "email": "annasmith23@gmail.com"
+    },
+    {
+      "id": 5,
+      "first_name": "Roger",
+      "last_name": "Bacon",
+      "email": "rogerbacon12@yahoo.com"
+    },
+    {
+      "email": "jbotrousdev@gmail.com",
+      "password": "gloryFox@5com",
+      "username": "jbo",
+      "id": 6
+    },
+    {
+      "email": "jbotrousdev@gmail.com",
+      "password": "gloryFox@5com",
+      "username": "jbotrous",
+      "id": 7
+    },
+    {
+      "email": "jbotrous@gmail.com",
+      "password": "gloryx@5com",
+      "username": "jbotrous",
+      "id": 8
+    },
+    {
+      "id": "9",
+      "email": "jbotrousdve@gmail.com",
+      "password": "gloryFox@5com",
+      "username": "jbotrous"
+    },
+    {
+      "id": "0.8189455780408859",
+      "email": "jbotrousdev@gmail.com",
+      "password": "gloryFox@5com",
+      "username": "jbotrous"
+    },
+    {
+      "email": "jbotrous@gmail.com",
+      "password": "gloryx@5com",
+      "username": "jbotrous",
+      "id": "2ZWlKa9"
+    },
+    {
+      "id": "RB0ZRZI"
+    }
+  ]
+}

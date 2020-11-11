@@ -1,0 +1,35 @@
+<h1>Login</h1>
+<form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" action="">
+  <mat-form-field class="control">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" formControlName="email" />
+    <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
+    <mat-error *ngIf="email.errors?.email"
+      >Please, enter a valid email address</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field class="control">
+    <mat-label>password</mat-label>
+    <input matInput type="password" formControlName="password" />
+    <mat-error *ngIf="password.errors?.required"
+      >password is required
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button mat-raised-button [disabled]="!loginForm.valid" type="submit">
+      Login
+    </button>
+
+    <a [routerLink]="['/register']">Register</a>
+  </div>
+
+
+  <ng-container #vc></ng-container>
+  <ng-template  #tmp>
+    <mat-error  >Email or password is invalid. </mat-error>
+
+  </ng-template>
+
+</form>
+
+
