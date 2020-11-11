@@ -1,0 +1,66 @@
+<h1>Register</h1>
+
+
+
+
+<form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+  <mat-form-field class="control">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      type="text"
+      formControlName="email"
+      placeholder="Ex. mail@gmail.com"
+    />
+
+    <mat-error *ngIf="email.errors?.email"
+      >Please, Enter a valid email address</mat-error
+    >
+    <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="control">
+    <mat-label>User Name</mat-label>
+    <input matInput type="text" formControlName="userName" />
+    <mat-error *ngIf="userName.errors?.required"
+      >User Name is required</mat-error
+    >
+    <mat-error *ngIf="userName.errors?.maxlength"
+      >User Name can not be greater than 10 characters
+    </mat-error>
+    <mat-error *ngIf="userName.errors?.minlength"
+      >User Name can not be less than 6 characters
+    </mat-error>
+  </mat-form-field>
+
+  <div formGroupName="passwords">
+    <mat-form-field class="control">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" />
+      <mat-error *ngIf="password.errors?.required"
+        >Password is required</mat-error
+      >
+      <mat-error *ngIf="password.errors?.minlength"
+        >Password can not be less than 6 characters</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field class="control">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" formControlName="confirmedPassword" />
+      <mat-error *ngIf="confirmedPassword.errors?.passwordMisMatch"
+        >Password Confirmation does not match</mat-error
+      >
+      <mat-error *ngIf="confirmedPassword.errors?.required"
+        >Password Confirmation is required</mat-error
+      >
+    </mat-form-field>
+  </div>
+
+  <div class="button-row">
+    <button mat-raised-button [disabled]="!registerForm.valid" type="submit">
+      Register
+    </button>
+  </div>
+</form>
+
+<a style="float: left;" [routerLink]="['/login']">Login</a>
